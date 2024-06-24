@@ -8,7 +8,7 @@
         body {
             margin: 0;
             overflow: hidden; /* Hide overflow to prevent scrollbars */
-            background-color: #000; /* Black background */
+            background-color: transparent; /* Transparent background */
         }
         .rain {
             position: absolute;
@@ -17,6 +17,7 @@
             width: 100%;
             height: 100%;
             pointer-events: none; /* Prevent raindrops from blocking interactions */
+            background-color: transparent; /* Transparent background */
             animation: rain 20s linear infinite; /* Rain animation for 20 seconds */
         }
         @keyframes rain {
@@ -49,7 +50,7 @@
     <div class="rain" id="rain"></div>
 
     <script>
-        // JavaScript to create raindrops dynamically
+        // JavaScript to create raindrops dynamically and stop after 20 seconds
         function createRaindrops() {
             const rainContainer = document.getElementById('rain');
             const numberOfDrops = 100; // Adjust number of raindrops as needed
